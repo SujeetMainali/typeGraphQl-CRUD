@@ -1,7 +1,6 @@
 import { UserAccuntDetailsInput } from "../validator/user.validator";
 import { AppDataSource } from "../config/database.config";
 import { UserAccountDetails } from "../entities/userAccount.entity";
-import { User } from "../entities/User.entity";
 
 class UserAccountDetailsService {
   constructor(

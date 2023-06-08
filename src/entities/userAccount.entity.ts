@@ -1,6 +1,5 @@
 import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import { User } from "./User.entity";
-import { Field, Int, ObjectType } from "type-graphql";
 
 
 @Entity()

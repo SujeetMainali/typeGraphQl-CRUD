@@ -1,5 +1,4 @@
-import { Field, Int, ObjectType } from "type-graphql";
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany, JoinColumn } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany } from "typeorm";
 import { UserAccountDetails } from "./userAccount.entity";
 
 
@@ -16,8 +15,6 @@ export class User extends BaseEntity{
     @Column()
     age: number
 
-    // @Column()
-    // address: string
 
     @OneToMany(()=>UserAccountDetails, (userAccountDetails)=>userAccountDetails.user)
     userAccountDetails: UserAccountDetails[]

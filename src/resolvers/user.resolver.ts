@@ -1,11 +1,9 @@
-import { query } from "express";
 import userService from "../service/user.service";
 import { UserSchema } from "../schema/user.schema";
-import { Arg, Args, Mutation, Query, Resolver } from "type-graphql";
-import { UserAccuntDetailsInput, UserInput } from "../validator/user.validator";
+import { Arg, Mutation, Query, Resolver } from "type-graphql";
+import {  UserInput } from "../validator/user.validator";
 import userAccountdetailService from "../service/userAccountdetail.service";
-import { User } from "../entities/User.entity";
-import { UserAccountDetails } from "../entities/userAccount.entity";
+
 
 @Resolver()
 export class UserResolver {

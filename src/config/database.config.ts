@@ -1,5 +1,4 @@
 import { DataSource } from "typeorm";
-import path from "path";
 import { User } from "../entities/User.entity";
 import { UserAccountDetails } from "../entities/userAccount.entity";
    export const AppDataSource = new DataSource({
