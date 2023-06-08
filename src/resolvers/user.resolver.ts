@@ -36,4 +36,13 @@ export class UserResolver {
     const user =  await userService.getById(id);
     return [user]
   }
+
+  @Mutation(()=>UserSchema)
+  async updateUserById(
+    @Arg("id")id: string,
+    @Arg('data')data: UserInput
+  ){
+    const user = await userService.updateUserById(id, data)
+    return user
+  }
 }

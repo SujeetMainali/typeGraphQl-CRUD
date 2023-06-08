@@ -37,6 +37,19 @@ class UserServce {
     });
     return user;
   }
+
+  async updateUserById(id: string, data: UserInput) {
+    const user = await this.userRepository.findOne({
+      where: {
+        id,
+      },
+    });
+    if (user) {
+      user.name = data.name;
+      user.age = data.age;
+      return await user.save();
+    }
+  }
 }
 
 export default new UserServce();
